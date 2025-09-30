@@ -1,4 +1,6 @@
-# Miscellaneous
+# -------------------------
+# General
+# -------------------------
 *.class
 *.log
 *.pyc
@@ -12,34 +14,98 @@
 .swiftpm/
 migrate_working_dir/
 
-# IntelliJ related
+# -------------------------
+# IntelliJ / Android Studio
+# -------------------------
 *.iml
 *.ipr
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# -------------------------
+# VS Code
+# -------------------------
+# Uncomment if you don’t want to commit VSCode settings
+# .vscode/
 
-# Flutter/Dart/Pub related
+# -------------------------
+# Flutter / Dart / Pub
+# -------------------------
 **/doc/api/
-**/ios/Flutter/.last_build_id
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
+.packages
 .pub-cache/
 .pub/
-/build/
+build/
 
-# Symbolication related
+# iOS build identifiers
+**/ios/Flutter/.last_build_id
+
+# -------------------------
+# Android
+# -------------------------
+/android/.gradle/
+/android/captures/
+/android/.idea/
+/android/local.properties
+/android/app/build/
+/android/build/
+/android/.gradletasknamecache
+.gradle/
+/captures/
+/outputs/
+
+# Keystore files (do NOT commit private keys)
+*.jks
+*.keystore
+
+# -------------------------
+# iOS
+# -------------------------
+**/ios/Flutter/ephemeral/
+/ios/Flutter/App.framework
+/ios/Flutter/Flutter.framework
+/ios/Flutter/Generated.xcconfig
+/ios/Flutter/GeneratedPluginRegistrant.*
+/ios/.symlinks/
+/ios/Pods/
+/ios/Podfile.lock
+/ios/Runner/GeneratedPluginRegistrant.*
+
+# -------------------------
+# macOS
+# -------------------------
+**/macos/Flutter/ephemeral/
+/macos/Flutter/GeneratedPluginRegistrant.swift
+/macos/Pods/
+/macos/Podfile.lock
+
+# -------------------------
+# Windows
+# -------------------------
+**/windows/Flutter/ephemeral/
+
+# -------------------------
+# Linux
+# -------------------------
+**/linux/Flutter/ephemeral/
+
+# -------------------------
+# Web
+# -------------------------
+/web/manifest.json
+/web/favicon.png
+/web/icons/
+/web/.dart_tool/
+/web/.flutter-plugins
+/web/.flutter-plugins-dependencies
+/web/.packages
+/web/canvaskit/
+
+# -------------------------
+# Symbolication / Obfuscation
+# -------------------------
 app.*.symbols
-
-# Obfuscation related
 app.*.map.json
-
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
