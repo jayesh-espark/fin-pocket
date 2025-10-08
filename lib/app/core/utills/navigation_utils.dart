@@ -1,5 +1,19 @@
 import 'package:flutter/material.dart';
 
+/// Navigate to a named route and clear the entire navigation stack
+Future<T?> navigateToNamedKillAll<T>(
+  BuildContext context,
+  String routeName, {
+  Object? arguments,
+}) {
+  return Navigator.pushNamedAndRemoveUntil(
+    context,
+    routeName,
+    (route) => false,
+    arguments: arguments,
+  );
+}
+
 /// Push a named route
 Future<T?> navigateToNamed<T>(
   BuildContext context,
