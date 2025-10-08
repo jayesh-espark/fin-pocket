@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
         if (state is NavigateToHomeState) {
           Future.delayed(const Duration(milliseconds: 2000), () {
             if (context.mounted) {
-              navigateToNamed(context, AppRouter.homeScreen);
+              navigateToNamedKillAll(context, AppRouter.homeScreen);
             }
           });
         }

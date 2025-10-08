@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../blocs/ calender/calendar_bloc.dart';
 import '../blocs/expense/expense_bloc.dart';
 import '../blocs/splash/splash_bloc.dart';
 import '../screens/home_screen.dart';
 import '../screens/splash_screen.dart';
+import '../blocs/reels/reels_bloc.dart';
+import '../blocs/video_player/video_player_bloc.dart';
 
 class AppRouter {
   // Named routes
@@ -27,6 +28,8 @@ class AppRouter {
             providers: [
               BlocProvider(create: (context) => ExpenseBloc()),
               BlocProvider(create: (context) => CalendarBloc()),
+              BlocProvider(create: (context) => ReelsBloc()),
+              BlocProvider(create: (context) => VideoPlayerBloc()),
             ],
             child: HomeScreen(),
           ),

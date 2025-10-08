@@ -13,7 +13,6 @@ class JsonManagement {
   Future<List<DailyFinancial>> loadExpenses(BuildContext context) async {
     try {
       final String response = await _getLocalFile(context);
-      log("response => $response");
       final List<dynamic> data = jsonDecode(response);
       return data.map((e) => DailyFinancial.fromJson(e)).toList();
     } catch (e) {
